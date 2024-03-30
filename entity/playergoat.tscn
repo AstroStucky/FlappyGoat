@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dce7wul2vi41k"]
+
+[ext_resource type="Script" path="res://entity/goat.gd" id="1_dgsmw"]
+[ext_resource type="PackedScene" uid="uid://2d85uqp03wr0" path="res://entity/ragdoll.tscn" id="2_hq50l"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pc0tl"]
+radius = 1.41717
+height = 6.09062
+
+[node name="CharacterBody3D" type="Area3D"]
+script = ExtResource("1_dgsmw")
+push = 30.0
+cooldown = 0.2
+gravity_strength = 35.0
+
+[node name="goat" parent="." instance=ExtResource("2_hq50l")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 4.73853, 0)
+shape = SubResource("CapsuleShape3D_pc0tl")
+
+[node name="flap_cooldown" type="Timer" parent="."]
+process_callback = 0
+one_shot = true

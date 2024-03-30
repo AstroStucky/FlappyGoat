@@ -1,0 +1,418 @@
+[gd_scene load_steps=23 format=3 uid="uid://2d85uqp03wr0"]
+
+[ext_resource type="PackedScene" uid="uid://bvpmy11nqd658" path="res://assets/goat.blend" id="1_qj7or"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s60l0"]
+radius = 0.0115495
+height = 0.115495
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4bk26"]
+radius = 0.0252675
+height = 0.252675
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y254w"]
+radius = 0.0534392
+height = 0.534392
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_osq70"]
+radius = 0.0862455
+height = 0.862455
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_70tj5"]
+radius = 0.0599956
+height = 0.599956
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4mfbu"]
+radius = 0.467
+height = 1.52821
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7imfh"]
+radius = 0.24
+height = 1.936
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nhfcf"]
+radius = 0.286
+height = 2.05583
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8rjs1"]
+radius = 0.113752
+height = 1.13752
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tsp7c"]
+radius = 0.182678
+height = 1.82678
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xgby4"]
+radius = 0.205583
+height = 2.05583
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6kpcf"]
+radius = 0.113752
+height = 1.13752
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_piw14"]
+radius = 0.182678
+height = 1.82678
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ystvf"]
+radius = 0.295
+height = 2.311
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rbn4b"]
+radius = 0.384
+height = 2.13716
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1rctw"]
+radius = 0.132562
+height = 1.32562
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1d4iw"]
+radius = 0.150912
+height = 1.50912
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g03rw"]
+radius = 0.132561
+height = 1.32561
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kni40"]
+radius = 0.150912
+height = 1.50912
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t67sn"]
+radius = 1.2656
+height = 3.449
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vfxk5"]
+radius = 1.05772
+height = 2.57347
+
+[node name="goat" instance=ExtResource("1_qj7or")]
+
+[node name="goatarmature_Skeleton3D_Physical Bone tonguesegment_001#CollisionShape3D" type="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_s60l0")
+
+[node name="goatarmature_Skeleton3D_Physical Bone tonguebase#CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_4bk26")
+
+[node name="goatarmature_Skeleton3D_Physical Bone beard_high#CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_y254w")
+
+[node name="goatarmature_Skeleton3D_Physical Bone jaw_lower#CollisionShape3D" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_osq70")
+
+[node name="goatarmature_Skeleton3D_Physical Bone head#CollisionShape3D" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_70tj5")
+
+[node name="goatarmature_Skeleton3D_Physical Bone neck#CollisionShape3D" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(1, 9.79482e-08, -7.16528e-09, -8.19807e-09, 0.155969, 0.987762, 9.78815e-08, -0.987762, 0.155969, -6.02713e-08, -0.0964901, 0.0902486)
+shape = SubResource("CapsuleShape3D_4mfbu")
+
+[node name="goatarmature_Skeleton3D_Physical Bone anklerear_r_001#CollisionShape3D" type="CollisionShape3D" parent="." index="6"]
+transform = Transform3D(0.999295, 0.0370479, 0.00578837, 0.0057885, -0.304931, 0.952354, 0.0370479, -0.95165, -0.304931, 0.0173602, -0.142889, -0.396768)
+shape = SubResource("CapsuleShape3D_7imfh")
+
+[node name="goatarmature_Skeleton3D_Physical Bone shinrear_r_001#CollisionShape3D" type="CollisionShape3D" parent="." index="7"]
+transform = Transform3D(0.999846, -0.0140287, 0.0105116, -0.00941305, 0.0761935, 0.997048, -0.0147882, -0.996994, 0.0760498, 0.025305, -0.144125, -0.0150974)
+shape = SubResource("CapsuleShape3D_nhfcf")
+
+[node name="goatarmature_Skeleton3D_Physical Bone thigh_r_001#CollisionShape3D" type="CollisionShape3D" parent="." index="8"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_8rjs1")
+
+[node name="goatarmature_Skeleton3D_Physical Bone shoulder_r#CollisionShape3D" type="CollisionShape3D" parent="." index="9"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_tsp7c")
+
+[node name="goatarmature_Skeleton3D_Physical Bone anklerear_l_001#CollisionShape3D" type="CollisionShape3D" parent="." index="10"]
+transform = Transform3D(0.999296, -0.0370203, -0.00578453, -0.00578418, -0.304935, 0.952353, -0.0370202, -0.951653, -0.304935, -0.0173628, -0.143016, -0.401071)
+shape = SubResource("CapsuleShape3D_7imfh")
+
+[node name="goatarmature_Skeleton3D_Physical Bone shinrear_l_001#CollisionShape3D" type="CollisionShape3D" parent="." index="11"]
+transform = Transform3D(0.999846, 0.0140286, -0.0105117, 0.00941308, 0.0761935, 0.997048, 0.0147881, -0.996994, 0.0760497, -0.0253046, -0.144126, -0.0150969)
+shape = SubResource("CapsuleShape3D_xgby4")
+
+[node name="goatarmature_Skeleton3D_Physical Bone thigh_l_001#CollisionShape3D" type="CollisionShape3D" parent="." index="12"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_6kpcf")
+
+[node name="goatarmature_Skeleton3D_Physical Bone shoulder_l#CollisionShape3D" type="CollisionShape3D" parent="." index="13"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_piw14")
+
+[node name="goatarmature_Skeleton3D_Physical Bone anklerear_r#CollisionShape3D" type="CollisionShape3D" parent="." index="14"]
+transform = Transform3D(0.999828, 0.0184229, 0.00140611, 0.00140613, -0.151751, 0.988417, 0.0184229, -0.988246, -0.151751, -0.00854146, 0.0703561, -0.447464)
+shape = SubResource("CapsuleShape3D_ystvf")
+
+[node name="goatarmature_Skeleton3D_Physical Bone shinrear_r#CollisionShape3D" type="CollisionShape3D" parent="." index="15"]
+transform = Transform3D(1, 0, -1.49012e-08, -2.98023e-08, 0, 1, -3.72529e-09, -1, 2.98023e-08, -0.0266749, 0.152326, -0.0657053)
+shape = SubResource("CapsuleShape3D_rbn4b")
+
+[node name="goatarmature_Skeleton3D_Physical Bone thigh_r#CollisionShape3D" type="CollisionShape3D" parent="." index="16"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_1rctw")
+
+[node name="goatarmature_Skeleton3D_Physical Bone hip_r#CollisionShape3D" type="CollisionShape3D" parent="." index="17"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_1d4iw")
+
+[node name="goatarmature_Skeleton3D_Physical Bone anklerear_l#CollisionShape3D" type="CollisionShape3D" parent="." index="18"]
+transform = Transform3D(0.999829, -0.0184229, -0.00140609, -0.0014061, -0.151751, 0.988418, -0.018423, -0.988247, -0.151751, 0.00832176, 0.0685513, -0.447484)
+shape = SubResource("CapsuleShape3D_ystvf")
+
+[node name="goatarmature_Skeleton3D_Physical Bone shinrear_l#CollisionShape3D" type="CollisionShape3D" parent="." index="19"]
+transform = Transform3D(1, 2.23517e-08, 2.98023e-08, 0, 5.96046e-08, 1, 1.49012e-08, -1, -5.96046e-08, 0.0266748, 0.152325, -0.0657051)
+shape = SubResource("CapsuleShape3D_rbn4b")
+
+[node name="goatarmature_Skeleton3D_Physical Bone thigh_l#CollisionShape3D" type="CollisionShape3D" parent="." index="20"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_g03rw")
+
+[node name="goatarmature_Skeleton3D_Physical Bone hip_l#CollisionShape3D" type="CollisionShape3D" parent="." index="21"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_kni40")
+
+[node name="goatarmature_Skeleton3D_Physical Bone back#CollisionShape3D" type="CollisionShape3D" parent="." index="22"]
+transform = Transform3D(1, 0, -1.59872e-14, 1.61871e-13, -1.4353e-12, 1, 0, -1, 0, -0.835124, -3.89138e-07, -0.553183)
+shape = SubResource("CapsuleShape3D_t67sn")
+
+[node name="goatarmature_Skeleton3D_Physical Bone root#CollisionShape3D" type="CollisionShape3D" parent="." index="23"]
+transform = Transform3D(1, 0, 2.13163e-14, -5.32907e-15, 0, 1, 0, -1, 0, -0.715881, -3.48712e-07, 0.0815587)
+shape = SubResource("CapsuleShape3D_vfxk5")
+
+[node name="goatarmature_Skeleton3D#Physical Bone tonguesegment_001" type="PhysicalBone3D" parent="." index="25"]
+transform = Transform3D(-1, 3.93111e-07, 1.84694e-09, 2.75359e-07, 0.70711, 0.707104, 2.75358e-07, 0.707104, -0.70711, -7.72441e-07, 6.95825, 5.10985)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.86906e-10, -2.62352e-06, 0.0577471)
+body_offset = Transform3D(1, -3.69614e-09, -1.84852e-09, -4.9738e-13, -4.05312e-06, -1, 1.42109e-14, 1, -4.11272e-06, -3.80169e-10, 0.0577471, 2.86102e-06)
+bone_name = "tonguesegment.001"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone tonguebase" type="PhysicalBone3D" parent="." index="26"]
+transform = Transform3D(-1, 8.75885e-08, -2.42005e-13, 8.73226e-08, 0.998885, 0.0478362, 4.182e-09, 0.0478355, -0.998885, -7.60614e-07, 7.005, 4.94292)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22195e-08, 0.000122167, 0.126443)
+body_offset = Transform3D(1, -1.64459e-10, 1.77636e-15, -2.36255e-13, -1.59442e-06, -1.00003, 8.40855e-13, 1.00003, -7.97212e-07, -1.22195e-08, 0.126447, -0.00012207)
+bone_name = "tonguebase"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone beard_high" type="PhysicalBone3D" parent="." index="27"]
+transform = Transform3D(-0.998898, -0.000950175, -0.0470642, -0.0469359, -0.0554678, 0.997436, -0.0035579, 0.998479, 0.0553685, 0.0125735, 6.46625, 4.24)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.71435e-07, -8.67059e-05, 0.267173)
+body_offset = Transform3D(1.00001, 7.21775e-08, -5.24306e-08, 1.87138e-07, -9.68575e-08, -1.00008, -4.42378e-09, 1.00002, 3.28198e-06, 6.85453e-07, 0.267194, 8.58307e-05)
+bone_name = "beard.high"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone jaw_lower" type="PhysicalBone3D" parent="." index="28"]
+transform = Transform3D(-1, -2.38217e-06, -8.96168e-07, -2.36413e-06, 0.739007, 0.673697, -9.42657e-07, 0.673698, -0.739008, -3.65342e-07, 7.02326, 3.93603)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.10281e-08, -2.83122e-07, 0.431228)
+body_offset = Transform3D(1, 3.63926e-06, 1.36903e-06, -6.82121e-13, 0.352075, -0.935973, -3.88822e-06, 0.935972, 0.352074, -6.11393e-07, 0.403618, -0.151824)
+bone_name = "jaw.lower"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone head" type="PhysicalBone3D" parent="." index="29"]
+transform = Transform3D(0.701673, -0.0179601, -0.712278, -0.709437, 0.0753724, -0.700743, 0.0660972, 0.997065, 0.040314, 0.213667, 7.52398, 3.60526)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.38773e-07, -2.04425e-07, 0.299977)
+body_offset = Transform3D(-0.701675, 0.01796, 0.712276, 4.54485e-07, 0.999758, -0.0248651, -0.712507, -0.0174467, -0.701463, -0.213667, 0.00745916, 0.210422)
+bone_name = "head"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone neck" type="PhysicalBone3D" parent="." index="30"]
+transform = Transform3D(-1, 6.27833e-07, 6.78144e-09, 4.08385e-07, 0.650446, -0.759553, -4.76884e-07, -0.759552, -0.650446, -7.72824e-07, 6.64236, 3.04237)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.99446e-09, -1.8441e-07, 0.883969)
+body_offset = Transform3D(1, -5.68434e-14, -6.78131e-09, 2.78533e-12, 4.76837e-07, -1, 1.78488e-11, 1, 2.08616e-07, 0, 0.883969, 0)
+bone_name = "neck"
+
+[node name="goatarmature_Skeleton3D#Physical Bone anklerear_r_001" type="PhysicalBone3D" parent="." index="31"]
+transform = Transform3D(0.992711, 0.120753, -5.43131e-08, 0.00343169, -0.0284731, 1.00062, 0.120469, -0.996581, -0.0285039, -0.516915, 1.33947, 1.71231)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90582e-06, -6.13274e-06, 0.5232)
+body_offset = Transform3D(1, -0.000281408, 5.65778e-08, -9.61591e-08, 8.48733e-05, -1.00103, 8.9407e-08, 1.00427, 6.07222e-07, -1.93715e-06, 0.523739, 5.84126e-06)
+bone_name = "anklerear.r.001"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone shinrear_r_001" type="PhysicalBone3D" parent="." index="32"]
+transform = Transform3D(0.974601, 0.184485, -0.127541, 0.143896, -0.0780776, 0.98651, 0.172028, -0.979848, -0.102626, -0.648017, 2.87705, 1.59191)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.77297e-07, 2.00203e-06, 1.02792)
+body_offset = Transform3D(1.00007, 3.06964e-06, 1.15484e-07, 1.51806e-06, -3.35276e-06, -1, -4.47035e-07, 1.00012, 6.03497e-07, -5.96046e-07, 1.02792, -2.6226e-06)
+bone_name = "shinrear.r.001"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone thigh_r_001" type="PhysicalBone3D" parent="." index="33"]
+transform = Transform3D(0.811939, -0.476135, -0.337715, 0.581317, 0.712193, 0.39351, 0.0531581, -0.515826, 0.855042, -0.972345, 4.11492, 1.97395)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000862624, 7.65868e-05, 0.567332)
+body_offset = Transform3D(1, -1.86265e-07, 5.84871e-07, -1.40443e-06, 5.96046e-08, -0.999999, -2.26311e-06, 1, 3.27826e-07, -0.000862956, 0.567332, -7.67708e-05)
+bone_name = "thigh.r.001"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone shoulder_r" type="PhysicalBone3D" parent="." index="34"]
+transform = Transform3D(0.96589, 0.0715577, 0.248872, -0.230063, -0.20407, 0.951502, 0.118879, -0.976341, -0.180646, -0.935955, 5.20784, 2.29405)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.37747e-06, -6.62867e-06, 0.913438)
+body_offset = Transform3D(1, 1.04308e-07, 1.47894e-06, -1.30571e-06, -1.13249e-06, -0.999964, -5.21541e-07, 1, 7.25687e-06, 2.02656e-06, 0.913404, 0)
+bone_name = "shoulder.r"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone anklerear_l_001" type="PhysicalBone3D" parent="." index="35"]
+transform = Transform3D(0.992715, -0.12053, -3.9352e-07, -0.00343201, -0.0282737, 0.999775, -0.120469, -0.992434, -0.0284797, 0.516908, 1.33946, 1.71232)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.87061e-06, 3.61743e-06, 0.523653)
+body_offset = Transform3D(1, 2.81632e-06, -2.33063e-07, 3.52971e-07, 3.50922e-06, -1.00018, -2.01166e-07, 1.00013, 6.03497e-07, -7.7486e-06, 0.523748, -3.93391e-06)
+bone_name = "anklerear.l.001"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone shinrear_l_001" type="PhysicalBone3D" parent="." index="36"]
+transform = Transform3D(0.974525, -0.184461, 0.127541, -0.143886, -0.0780722, 0.986494, -0.172017, -0.979733, -0.102625, 0.648015, 2.87705, 1.59191)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.76553e-07, -2.19106e-06, 1.02794)
+body_offset = Transform3D(0.999996, -2.83122e-07, 1.61491e-06, -3.93018e-07, 6.70552e-08, -0.999985, 2.63751e-06, 1, 1.08778e-06, -9.83477e-07, 1.02792, 1.07288e-06)
+bone_name = "shinrear.l.001"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone thigh_l_001" type="PhysicalBone3D" parent="." index="37"]
+transform = Transform3D(0.811938, 0.476135, 0.337717, -0.581322, 0.712195, 0.393511, -0.0531275, -0.515827, 0.855044, 0.971203, 4.11492, 1.97273)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46653e-06, -1.14768e-05, 0.56876)
+body_offset = Transform3D(1, -3.53903e-08, -6.33299e-08, -2.23629e-05, 2.98023e-07, -1, -1.73487e-05, 1, 4.76837e-07, -1.43051e-06, 0.568761, 1.12057e-05)
+bone_name = "thigh.l.001"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone shoulder_l" type="PhysicalBone3D" parent="." index="38"]
+transform = Transform3D(0.965888, -0.0715571, -0.248881, 0.230063, -0.20407, 0.951539, -0.118877, -0.976336, -0.180643, 0.935952, 5.20785, 2.29404)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87763e-06, -5.05654e-06, 0.913389)
+body_offset = Transform3D(1, -1.11759e-07, -2.36742e-06, 5.28991e-07, 1.19209e-07, -1, -6.70552e-07, 0.999998, -2.29478e-06, -7.15256e-07, 0.913389, 7.15256e-06)
+bone_name = "shoulder.l"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone anklerear_r" type="PhysicalBone3D" parent="." index="39"]
+transform = Transform3D(0.992709, 0.120517, -1.89195e-06, 0.0203911, -0.167966, 0.985584, 0.118777, -0.978397, -0.1692, -0.51692, 1.61083, -2.54345)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000626202, 0.00521684, 0.690187)
+body_offset = Transform3D(0.999998, -5.1409e-07, -2.07685e-06, -7.50646e-07, 4.61936e-07, -1, 2.91318e-06, 0.999999, 3.57628e-07, 0.000627637, 0.690188, -0.00521708)
+bone_name = "anklerear.r"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone shinrear_r" type="PhysicalBone3D" parent="." index="40"]
+transform = Transform3D(0.985213, 0.119607, -0.122688, 0.0644536, 0.404744, 0.912156, 0.158758, -0.906575, 0.391049, -0.648016, 3.26489, -2.24754)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98075e-09, 4.73417e-08, 1.06858)
+body_offset = Transform3D(1, -1.49012e-07, 3.72529e-09, -1.9744e-07, -5.96046e-08, -1, 3.57628e-07, 1, 1.78814e-07, 0, 1.06858, -2.38419e-07)
+bone_name = "shinrear.r"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone thigh_r" type="PhysicalBone3D" parent="." index="41"]
+transform = Transform3D(0.950113, 0.115346, -0.289801, 0.301733, -0.575279, 0.760269, -0.0790198, -0.809783, -0.581379, -0.971198, 4.74351, -2.21502)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.98452e-06, 3.98213e-06, 0.662808)
+body_offset = Transform3D(1, -9.68575e-08, -4.68269e-06, 5.02914e-07, 1.78814e-07, -0.999997, -2.23517e-08, 1, -2.95043e-06, 1.19209e-07, 0.662807, -2.02656e-06)
+bone_name = "thigh.r"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone hip_r" type="PhysicalBone3D" parent="." index="42"]
+transform = Transform3D(0.342609, 0.537063, 0.770832, -0.921992, 0.0346408, 0.385659, 0.180419, -0.84283, 0.507035, -0.58164, 5.53844, -2.21777)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.20829e-05, 5.12849e-07, 0.754557)
+body_offset = Transform3D(1, 4.47035e-08, 4.17233e-07, 1.73599e-06, 2.98023e-08, -1, 1.54972e-06, 1, 2.68221e-07, -1.23978e-05, 0.754557, -7.15256e-07)
+bone_name = "hip.r"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone anklerear_l" type="PhysicalBone3D" parent="." index="43"]
+transform = Transform3D(0.992718, -0.120518, -5.53353e-08, -0.0203914, -0.167966, 0.985584, -0.11878, -0.9784, -0.1692, 0.516913, 1.57979, -2.54345)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.87377e-06, -1.69476e-06, 0.720781)
+body_offset = Transform3D(1.00001, -5.1409e-07, 4.65661e-08, -6.33299e-08, 1.3411e-07, -1, -4.47035e-08, 1, 1.02818e-06, -1.90735e-06, 0.720783, 9.53674e-07)
+bone_name = "anklerear.l"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone shinrear_l" type="PhysicalBone3D" parent="." index="44"]
+transform = Transform3D(0.98523, -0.119607, 0.12269, -0.0644554, 0.404744, 0.912158, -0.15876, -0.906574, 0.39105, 0.648016, 3.26489, -2.24754)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.33194e-07, 9.87228e-07, 1.06858)
+body_offset = Transform3D(1.00002, 1.93715e-07, 1.07661e-06, 3.20375e-07, -4.17233e-07, -1, -5.96046e-07, 1, -9.23872e-07, -4.17233e-07, 1.06858, 0)
+bone_name = "shinrear.l"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone thigh_l" type="PhysicalBone3D" parent="." index="45"]
+transform = Transform3D(0.95011, -0.115336, 0.289797, -0.301733, -0.575272, 0.76027, 0.0790181, -0.809779, -0.581382, 0.971198, 4.74351, -2.21502)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.51643e-07, 1.60624e-06, 0.66281)
+body_offset = Transform3D(0.999998, 8.29995e-06, -2.6077e-07, -5.55068e-07, -5.21541e-06, -0.999998, 2.12342e-06, 0.999991, -8.04663e-07, -1.78814e-07, 0.662809, -1.07288e-06)
+bone_name = "thigh.l"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone hip_l" type="PhysicalBone3D" parent="." index="46"]
+transform = Transform3D(0.34261, -0.537063, -0.770832, 0.921991, 0.0346409, 0.385659, -0.180421, -0.842831, 0.507035, 0.581637, 5.53843, -2.21777)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29823e-07, -7.22027e-07, 0.754559)
+body_offset = Transform3D(1, 0, -3.35276e-07, -8.9407e-08, 0, -1, 4.47035e-08, 1, -1.49012e-07, -4.76837e-07, 0.754559, 8.34465e-07)
+bone_name = "hip.l"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone back" type="PhysicalBone3D" parent="." index="47"]
+transform = Transform3D(4.66806e-07, -1, -8.30219e-10, 0.997455, 4.83223e-07, -0.0712466, 0.0712469, 6.89214e-08, 0.997447, -5.53067e-07, 5.7504, -0.728809)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15202e-06, -9.57546e-08, 1.10921)
+body_offset = Transform3D(0.999997, 6.79462e-08, -1.78814e-07, 9.68575e-08, -1.1466e-07, -0.999988, -1.29138e-07, 1, -3.34317e-08, -9.53674e-07, 1.1092, 1.32838e-07)
+bone_name = "back"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="goatarmature_Skeleton3D#Physical Bone root" type="PhysicalBone3D" parent="." index="48"]
+transform = Transform3D(4.76813e-07, -1, -8.93952e-08, 0.989882, 4.76837e-07, 0.14189, -0.14189, -1.19209e-07, 0.989882, -7.02912e-07, 5.82116, 1.42249)
+joint_offset = Transform3D(1, 5.32907e-15, 0, -5.32907e-15, 1, 0, 0, 0, 1, 1.10107e-07, -2.44521e-08, 1.05559)
+joint_rotation = Vector3(0, 0, -5.32907e-15)
+body_offset = Transform3D(1, 4.2087e-08, -1.04308e-07, 2.98023e-08, -1.2646e-07, -1, -1.19186e-07, 1, -5.96164e-08, 0, 1.05559, 8.73827e-08)
+bone_name = "root"

@@ -1,0 +1,118 @@
+[gd_scene load_steps=19 format=3 uid="uid://bc3nctrhtant3"]
+
+[ext_resource type="PackedScene" uid="uid://dce7wul2vi41k" path="res://entity/playergoat.tscn" id="1_3uad1"]
+[ext_resource type="Script" path="res://entity/ScrollWithTarget.gd" id="1_sin5k"]
+[ext_resource type="MeshLibrary" uid="uid://5j6rgi3wgaia" path="res://entity/decorations.tres" id="4_4fckk"]
+[ext_resource type="Script" path="res://entity/ObstacleGenerator.gd" id="4_johsi"]
+[ext_resource type="Script" path="res://entity/DecorScroll.gd" id="6_fmwg5"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tux65"]
+sky_top_color = Color(0.533333, 0.819608, 0.996078, 1)
+sky_horizon_color = Color(0.85098, 0.921569, 1, 1)
+
+[sub_resource type="Sky" id="Sky_k04ys"]
+sky_material = SubResource("ProceduralSkyMaterial_tux65")
+
+[sub_resource type="Environment" id="Environment_trkvm"]
+sky = SubResource("Sky_k04ys")
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Gradient" id="Gradient_1nin5"]
+offsets = PackedFloat32Array(0, 0.997468)
+colors = PackedColorArray(0.479975, 0.650854, 0.250152, 1, 0.75521, 0.668434, 0.358478, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ncfei"]
+frequency = 0.15
+fractal_lacunarity = 1.0
+fractal_gain = 0.6
+fractal_weighted_strength = 0.82
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_jqqf7"]
+color_ramp = SubResource("Gradient_1nin5")
+noise = SubResource("FastNoiseLite_ncfei")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7kijx"]
+albedo_color = Color(0.992157, 0.807843, 0.537255, 1)
+albedo_texture = SubResource("NoiseTexture2D_jqqf7")
+emission_energy_multiplier = 9.0
+normal_scale = 0.1
+heightmap_texture = SubResource("NoiseTexture2D_jqqf7")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8mt44"]
+lightmap_size_hint = Vector2i(11502, 11502)
+material = SubResource("StandardMaterial3D_7kijx")
+add_uv2 = true
+size = Vector2(2300, 2300)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oowjp"]
+size = Vector3(50, 200, 5)
+
+[sub_resource type="Gradient" id="Gradient_iwyxq"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0.533333, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nlfad"]
+gradient = SubResource("Gradient_iwyxq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xyte0"]
+albedo_texture = SubResource("GradientTexture1D_nlfad")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_u8rot"]
+lightmap_size_hint = Vector2i(2502, 5002)
+material = SubResource("StandardMaterial3D_xyte0")
+flip_faces = true
+add_uv2 = true
+size = Vector2(500, 1000)
+orientation = 0
+
+[node name="main" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+light_energy = 5.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_trkvm")
+
+[node name="playergoat" parent="." instance=ExtResource("1_3uad1")]
+push = 6.0
+cooldown = 0.05
+gravity_strength = 9.8
+scroll_speed = 10.0
+
+[node name="ObstacleGenerator" type="Node3D" parent="."]
+script = ExtResource("4_johsi")
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0)
+mesh_library = ExtResource("4_4fckk")
+cell_size = Vector3(2, 8, 2)
+collision_layer = 0
+collision_mask = 0
+data = {
+"cells": PackedInt32Array(13, 16, 63, 12, 42, 63, 7, 65534, 63, 31, 16, 63, 12, 32, 63, 61, 6, 20, 20, 36, 66, 29, 79, 66, 29, 80, 66, 28, 33, 55, 26, 29, 55, 24, 29, 55, 24, 30, 55, 29, 37, 55, 28, 36, 55, 26, 27, 55, 25, 26, 55, 24, 26, 55, 23, 26, 55, 22, 25, 55, 22, 22, 55, 23, 23, 55, 23, 24, 55, 23, 22, 55, 23, 21, 55, 24, 16, 55, 26, 19, 55, 26, 20, 55, 28, 22, 55, 27, 22, 55, 27, 21, 55, 25, 20, 55, 25, 19, 55, 21, 15, 55, 21, 14, 55, 22, 13, 55, 23, 11, 55, 24, 11, 55, 24, 10, 55, 27, 11, 55, 27, 12, 55, 26, 13, 55, 26, 14, 55, 26, 15, 55, 26, 16, 55, 25, 16, 55, 25, 15, 55, 24, 14, 55, 25, 12, 55, 22, 9, 55, 22, 8, 55, 23, 2, 55, 22, 2, 55, 21, 2, 55, 20, 2, 55, 19, 3, 55, 19, 4, 55, 19, 5, 55, 19, 6, 55, 21, 11, 55, 21, 10, 55, 21, 8, 55, 20, 5, 55, 20, 1, 55, 21, 0, 55, 26, 1, 55, 26, 2, 55, 26, 3, 55, 27, 3, 55, 29, 5, 55, 28, 5, 55, 25, 6, 55, 24, 7, 55, 23, 8, 55, 28, 28, 55, 29, 28, 55, 27, 26, 55, 26, 23, 55, 25, 10, 55, 25, 9, 55, 25, 8, 55, 24, 2, 55, 25, 2, 55, 24, 3, 55, 23, 4, 55, 23, 25, 55, 21, 26, 55, 23, 33, 55, 23, 34, 55, 24, 36, 55, 29, 42, 55, 28, 41, 55, 27, 41, 55, 26, 41, 55, 25, 34, 55, 25, 33, 55, 24, 33, 55, 24, 32, 55, 23, 31, 55, 22, 30, 55, 23, 28, 55, 22, 27, 55, 21, 25, 55, 20, 24, 55, 20, 22, 55, 20, 21, 55, 20, 20, 55, 22, 17, 55, 22, 18, 55, 21, 18, 55, 22, 21, 55, 28, 44, 55, 29, 44, 55, 28, 45, 55, 29, 48, 55, 28, 47, 55, 27, 46, 55, 25, 45, 55, 24, 45, 55, 23, 45, 55, 24, 46, 55, 24, 47, 55, 23, 46, 55, 23, 44, 55, 23, 42, 55, 22, 42, 55, 22, 43, 55, 24, 41, 55, 24, 42, 55, 25, 42, 55, 26, 46, 55, 26, 47, 55, 26, 49, 55, 26, 50, 55, 30, 60, 55, 33, 57, 55, 31, 55, 55, 29, 54, 55, 27, 52, 55, 26, 51, 55, 23, 49, 55, 22, 48, 55, 21, 49, 55, 21, 53, 55, 21, 52, 55, 21, 51, 55, 20, 50, 55, 27, 59, 55, 30, 58, 55, 28, 57, 55, 27, 56, 55, 24, 53, 55, 22, 51, 55, 22, 50, 55, 21, 50, 55, 65583, 44, 20, 65585, 34, 20, 65581, 37, 20, 65585, 40, 20, 65585, 24, 20, 65584, 18, 20, 65590, 16, 22, 65588, 23, 22, 65593, 31, 22, 65589, 42, 22, 65585, 52, 22)
+}
+script = ExtResource("6_fmwg5")
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="Floor" type="MeshInstance3D" parent="GridMap"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 174.728, 1, 0)
+mesh = SubResource("PlaneMesh_8mt44")
+skeleton = NodePath("../..")
+
+[node name="DuplicateBoundary" type="Area3D" parent="GridMap"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 64.873, 500)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/DuplicateBoundary"]
+shape = SubResource("BoxShape3D_oowjp")
+
+[node name="ScrollWithPlayer" type="Node3D" parent="." node_paths=PackedStringArray("target")]
+script = ExtResource("1_sin5k")
+target = NodePath("../playergoat")
+
+[node name="Sky" type="MeshInstance3D" parent="ScrollWithPlayer"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 339.782, 233.763, 0)
+mesh = SubResource("PlaneMesh_u8rot")
+skeleton = NodePath("../..")
+
+[node name="SideScrollCamera" type="Camera3D" parent="ScrollWithPlayer"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.62, 1.75, 3.685)
