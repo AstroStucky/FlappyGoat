@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0tspbi2fjlu"]
+
+[ext_resource type="Script" path="res://entity/ScorePanel.gd" id="1_0ghja"]
+
+[sub_resource type="SystemFont" id="SystemFont_k4vmg"]
+
+[sub_resource type="Theme" id="Theme_un7s2"]
+default_font = SubResource("SystemFont_k4vmg")
+
+[node name="ScorePanel" type="Control"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+script = ExtResource("1_0ghja")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -55.0
+offset_right = 137.0
+alignment = 1
+
+[node name="Distance" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Distance"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+theme = SubResource("Theme_un7s2")
+text = "Distance"
+uppercase = true
+
+[node name="Number" type="Label" parent="VBoxContainer/Distance"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "0.00"
+
+[node name="Units" type="Label" parent="VBoxContainer/Distance"]
+layout_mode = 2
+text = "m"
+
+[node name="Highscore" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Highscore"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+text = "HighScore"
+uppercase = true
+
+[node name="Number" type="Label" parent="VBoxContainer/Highscore"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "0.00"
+
+[node name="Units" type="Label" parent="VBoxContainer/Highscore"]
+layout_mode = 2
+text = "m"

@@ -61,6 +61,7 @@ height = 6.48134
 radius = 0.250675
 
 [node name="pipe" type="StaticBody3D"]
+collision_mask = 257
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_68ybo")

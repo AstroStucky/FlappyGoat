@@ -5,6 +5,7 @@ const Obstacle : PackedScene = preload("res://entity/obstacle.tscn")
 @export var obstacle_spacing : float
 @export var target : Node3D
 @export var batch_width : float
+@export var initial_clearing : float
 @export var min_gap : float
 @export var max_gap : float
 @export var y_height : float
@@ -23,7 +24,7 @@ func generate_and_cleanup(batch_multiplier : int = 1):
 	print_debug("Generating more obstacles")
 	var start_z : float
 	if get_child_count() == 0:
-		start_z = target.global_position.z
+		start_z = target.global_position.z + initial_clearing
 	else:
 		# start from most recently added obstacle
 		start_z = get_child(-1).position.z

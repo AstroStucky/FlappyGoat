@@ -7,7 +7,8 @@
 radius = 0.164364
 height = 0.638533
 
-[node name="CharacterBody3D" type="Area3D"]
+[node name="playergoat" type="Area3D" groups=["Goat"]]
+collision_layer = 0
 script = ExtResource("1_dgsmw")
 push = 6.0
 cooldown = 0.05
