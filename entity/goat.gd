@@ -16,14 +16,12 @@ func flap():
 		_velocity += Vector3(0, push, 0)
 		$flap_cooldown.start(cooldown)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta : float):
 	_velocity += delta * Vector3(0, -gravity_strength, 0)
 	position += delta * (_velocity + Vector3(0, 0, scroll_speed))
 	
 func _input(event : InputEvent):
 	if event.is_action_pressed("flap"):
-		print("Flapped!")
 		flap()
 	
   

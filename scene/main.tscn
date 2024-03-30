@@ -40,13 +40,13 @@ normal_scale = 0.1
 heightmap_texture = SubResource("NoiseTexture2D_jqqf7")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8mt44"]
-lightmap_size_hint = Vector2i(11502, 11502)
+lightmap_size_hint = Vector2i(2352, 2352)
 material = SubResource("StandardMaterial3D_7kijx")
 add_uv2 = true
-size = Vector2(2300, 2300)
+size = Vector2(470, 470)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oowjp"]
-size = Vector3(50, 200, 5)
+size = Vector3(50, 302.482, 5)
 
 [sub_resource type="Gradient" id="Gradient_iwyxq"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0.533333, 1, 1)
@@ -58,11 +58,11 @@ gradient = SubResource("Gradient_iwyxq")
 albedo_texture = SubResource("GradientTexture1D_nlfad")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_u8rot"]
-lightmap_size_hint = Vector2i(2502, 5002)
+lightmap_size_hint = Vector2i(2502, 15002)
 material = SubResource("StandardMaterial3D_xyte0")
 flip_faces = true
 add_uv2 = true
-size = Vector2(500, 1000)
+size = Vector2(500, 3000)
 orientation = 0
 
 [node name="main" type="Node3D"]
@@ -74,35 +74,32 @@ light_energy = 5.0
 environment = SubResource("Environment_trkvm")
 
 [node name="playergoat" parent="." instance=ExtResource("1_3uad1")]
-push = 6.0
-cooldown = 0.05
-gravity_strength = 9.8
-scroll_speed = 10.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 
 [node name="ObstacleGenerator" type="Node3D" parent="."]
 script = ExtResource("4_johsi")
 
-[node name="GridMap" type="GridMap" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0)
+[node name="GridMap" type="GridMap" parent="." node_paths=PackedStringArray("backdrop")]
 mesh_library = ExtResource("4_4fckk")
 cell_size = Vector3(2, 8, 2)
 collision_layer = 0
 collision_mask = 0
 data = {
-"cells": PackedInt32Array(13, 16, 63, 12, 42, 63, 7, 65534, 63, 31, 16, 63, 12, 32, 63, 61, 6, 20, 20, 36, 66, 29, 79, 66, 29, 80, 66, 28, 33, 55, 26, 29, 55, 24, 29, 55, 24, 30, 55, 29, 37, 55, 28, 36, 55, 26, 27, 55, 25, 26, 55, 24, 26, 55, 23, 26, 55, 22, 25, 55, 22, 22, 55, 23, 23, 55, 23, 24, 55, 23, 22, 55, 23, 21, 55, 24, 16, 55, 26, 19, 55, 26, 20, 55, 28, 22, 55, 27, 22, 55, 27, 21, 55, 25, 20, 55, 25, 19, 55, 21, 15, 55, 21, 14, 55, 22, 13, 55, 23, 11, 55, 24, 11, 55, 24, 10, 55, 27, 11, 55, 27, 12, 55, 26, 13, 55, 26, 14, 55, 26, 15, 55, 26, 16, 55, 25, 16, 55, 25, 15, 55, 24, 14, 55, 25, 12, 55, 22, 9, 55, 22, 8, 55, 23, 2, 55, 22, 2, 55, 21, 2, 55, 20, 2, 55, 19, 3, 55, 19, 4, 55, 19, 5, 55, 19, 6, 55, 21, 11, 55, 21, 10, 55, 21, 8, 55, 20, 5, 55, 20, 1, 55, 21, 0, 55, 26, 1, 55, 26, 2, 55, 26, 3, 55, 27, 3, 55, 29, 5, 55, 28, 5, 55, 25, 6, 55, 24, 7, 55, 23, 8, 55, 28, 28, 55, 29, 28, 55, 27, 26, 55, 26, 23, 55, 25, 10, 55, 25, 9, 55, 25, 8, 55, 24, 2, 55, 25, 2, 55, 24, 3, 55, 23, 4, 55, 23, 25, 55, 21, 26, 55, 23, 33, 55, 23, 34, 55, 24, 36, 55, 29, 42, 55, 28, 41, 55, 27, 41, 55, 26, 41, 55, 25, 34, 55, 25, 33, 55, 24, 33, 55, 24, 32, 55, 23, 31, 55, 22, 30, 55, 23, 28, 55, 22, 27, 55, 21, 25, 55, 20, 24, 55, 20, 22, 55, 20, 21, 55, 20, 20, 55, 22, 17, 55, 22, 18, 55, 21, 18, 55, 22, 21, 55, 28, 44, 55, 29, 44, 55, 28, 45, 55, 29, 48, 55, 28, 47, 55, 27, 46, 55, 25, 45, 55, 24, 45, 55, 23, 45, 55, 24, 46, 55, 24, 47, 55, 23, 46, 55, 23, 44, 55, 23, 42, 55, 22, 42, 55, 22, 43, 55, 24, 41, 55, 24, 42, 55, 25, 42, 55, 26, 46, 55, 26, 47, 55, 26, 49, 55, 26, 50, 55, 30, 60, 55, 33, 57, 55, 31, 55, 55, 29, 54, 55, 27, 52, 55, 26, 51, 55, 23, 49, 55, 22, 48, 55, 21, 49, 55, 21, 53, 55, 21, 52, 55, 21, 51, 55, 20, 50, 55, 27, 59, 55, 30, 58, 55, 28, 57, 55, 27, 56, 55, 24, 53, 55, 22, 51, 55, 22, 50, 55, 21, 50, 55, 65583, 44, 20, 65585, 34, 20, 65581, 37, 20, 65585, 40, 20, 65585, 24, 20, 65584, 18, 20, 65590, 16, 22, 65588, 23, 22, 65593, 31, 22, 65589, 42, 22, 65585, 52, 22)
+"cells": PackedInt32Array(13, 16, 63, 12, 42, 63, 7, 65534, 63, 31, 16, 63, 12, 32, 63, 61, 6, 20, 20, 36, 66, 29, 79, 66, 28, 33, 55, 26, 29, 55, 24, 29, 55, 24, 30, 55, 29, 37, 55, 28, 36, 55, 26, 27, 55, 25, 26, 55, 24, 26, 55, 23, 26, 55, 22, 25, 55, 22, 22, 55, 23, 23, 55, 23, 24, 55, 23, 22, 55, 23, 21, 55, 24, 16, 55, 26, 19, 55, 26, 20, 55, 28, 22, 55, 27, 22, 55, 27, 21, 55, 25, 20, 55, 25, 19, 55, 21, 15, 55, 21, 14, 55, 22, 13, 55, 23, 11, 55, 24, 11, 55, 24, 10, 55, 27, 11, 55, 27, 12, 55, 26, 13, 55, 26, 14, 55, 26, 15, 55, 26, 16, 55, 25, 16, 55, 25, 15, 55, 24, 14, 55, 25, 12, 55, 22, 9, 55, 22, 8, 55, 23, 2, 55, 22, 2, 55, 21, 2, 55, 20, 2, 55, 19, 3, 55, 19, 4, 55, 19, 5, 55, 19, 6, 55, 21, 11, 55, 21, 10, 55, 21, 8, 55, 20, 5, 55, 20, 1, 55, 21, 0, 55, 26, 1, 55, 26, 2, 55, 26, 3, 55, 27, 3, 55, 29, 5, 55, 28, 5, 55, 25, 6, 55, 24, 7, 55, 23, 8, 55, 28, 28, 55, 29, 28, 55, 27, 26, 55, 26, 23, 55, 25, 10, 55, 25, 9, 55, 25, 8, 55, 24, 2, 55, 25, 2, 55, 24, 3, 55, 23, 4, 55, 23, 25, 55, 21, 26, 55, 23, 33, 55, 23, 34, 55, 24, 36, 55, 29, 42, 55, 28, 41, 55, 27, 41, 55, 26, 41, 55, 25, 34, 55, 25, 33, 55, 24, 33, 55, 24, 32, 55, 23, 31, 55, 22, 30, 55, 23, 28, 55, 22, 27, 55, 21, 25, 55, 20, 24, 55, 20, 22, 55, 20, 21, 55, 20, 20, 55, 22, 17, 55, 22, 18, 55, 21, 18, 55, 22, 21, 55, 28, 44, 55, 29, 44, 55, 28, 45, 55, 29, 48, 55, 28, 47, 55, 27, 46, 55, 25, 45, 55, 24, 45, 55, 23, 45, 55, 24, 46, 55, 24, 47, 55, 23, 46, 55, 23, 44, 55, 23, 42, 55, 22, 42, 55, 22, 43, 55, 24, 41, 55, 24, 42, 55, 25, 42, 55, 26, 46, 55, 26, 47, 55, 26, 49, 55, 26, 50, 55, 30, 60, 55, 33, 57, 55, 31, 55, 55, 29, 54, 55, 27, 52, 55, 26, 51, 55, 23, 49, 55, 22, 48, 55, 21, 49, 55, 21, 53, 55, 21, 52, 55, 21, 51, 55, 20, 50, 55, 27, 59, 55, 30, 58, 55, 28, 57, 55, 27, 56, 55, 24, 53, 55, 22, 51, 55, 22, 50, 55, 21, 50, 55, 65583, 44, 20, 65585, 34, 20, 65581, 37, 20, 65585, 40, 20, 65585, 24, 20, 65584, 18, 20, 12, 62, 1441798, 12, 87, 1441799, 12, 108, 1441800, 13, 131, 1441801, 13, 150, 1441802, 16, 173, 1441803, 14, 200, 1441804, 13, 233, 1441804, 45, 85, 7, 67, 61, 7)
 }
 script = ExtResource("6_fmwg5")
+backdrop = NodePath("../ScrollWithPlayer/Sky")
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="Floor" type="MeshInstance3D" parent="GridMap"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 174.728, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 174.728, 4, 0)
 mesh = SubResource("PlaneMesh_8mt44")
 skeleton = NodePath("../..")
 
-[node name="DuplicateBoundary" type="Area3D" parent="GridMap"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 64.873, 500)
+[node name="ShiftThreshold" type="Area3D" parent="GridMap"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 268.87)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/DuplicateBoundary"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/ShiftThreshold"]
 shape = SubResource("BoxShape3D_oowjp")
 
 [node name="ScrollWithPlayer" type="Node3D" parent="." node_paths=PackedStringArray("target")]
@@ -115,4 +112,4 @@ mesh = SubResource("PlaneMesh_u8rot")
 skeleton = NodePath("../..")
 
 [node name="SideScrollCamera" type="Camera3D" parent="ScrollWithPlayer"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.62, 1.75, 3.685)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.26, 8.415, 3.815)

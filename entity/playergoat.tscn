@@ -4,19 +4,20 @@
 [ext_resource type="PackedScene" uid="uid://2d85uqp03wr0" path="res://entity/ragdoll.tscn" id="2_hq50l"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pc0tl"]
-radius = 1.41717
-height = 6.09062
+radius = 0.164364
+height = 0.638533
 
 [node name="CharacterBody3D" type="Area3D"]
 script = ExtResource("1_dgsmw")
-push = 30.0
-cooldown = 0.2
-gravity_strength = 35.0
+push = 6.0
+cooldown = 0.05
+gravity_strength = 10.0
+scroll_speed = 10.0
 
 [node name="goat" parent="." instance=ExtResource("2_hq50l")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 4.73853, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.471275, 0)
 shape = SubResource("CapsuleShape3D_pc0tl")
 
 [node name="flap_cooldown" type="Timer" parent="."]
