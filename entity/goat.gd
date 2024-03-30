@@ -38,4 +38,6 @@ func kill():
 	_velocity = Vector3.ZERO
 	scroll_speed = 0.0 
 	killed.emit()
-  
+	await get_tree().create_timer(1.0).timeout
+	GameManager.await_reset()
+	

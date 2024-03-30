@@ -8,12 +8,12 @@ radius = 0.164364
 height = 0.638533
 
 [node name="playergoat" type="Area3D" groups=["Goat"]]
-collision_layer = 0
+collision_layer = 8
 script = ExtResource("1_dgsmw")
 push = 6.0
 cooldown = 0.05
 gravity_strength = 10.0
-scroll_speed = 10.0
+scroll_speed = 5.0
 
 [node name="goat" parent="." instance=ExtResource("2_hq50l")]
 

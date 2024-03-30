@@ -10,6 +10,7 @@ var _score : float
 func _ready():
 	_player = get_tree().get_nodes_in_group('Goat')[0]
 	_player.killed.connect(_on_player_killed)
+	highscore.text = String.num(ScoreKeeper.highscore, 2)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

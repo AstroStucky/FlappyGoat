@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://entity/ScorePanel.gd" id="1_0ghja"]
 
 [sub_resource type="SystemFont" id="SystemFont_k4vmg"]
+subpixel_positioning = 0
 
 [sub_resource type="Theme" id="Theme_un7s2"]
 default_font = SubResource("SystemFont_k4vmg")

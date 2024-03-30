@@ -18,6 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 ScoreKeeper="*res://entity/ScoreKeeper.gd"
+GameManager="*res://entity/GameManager.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [editor]
 
