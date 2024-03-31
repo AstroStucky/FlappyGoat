@@ -7,8 +7,8 @@ func await_reset():
 	
 func reset():
 	get_tree().reload_current_scene()
+	resetable = false
 
 func _input(event : InputEvent):
 	if resetable and event.is_action_pressed("flap"):
 		reset()
-		resetable = false
