@@ -57,7 +57,7 @@ height = 0.101289
 radius = 0.363254
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_v5urv"]
-height = 6.48134
+height = 15.87
 radius = 0.250675
 
 [node name="pipe" type="StaticBody3D"]
@@ -72,5 +72,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0502946, 0)
 shape = SubResource("CylinderShape3D_rmyv7")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000428677, -3.33943, -7.63182e-05)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000428677, -8.01972, -7.63182e-05)
 shape = SubResource("CylinderShape3D_v5urv")
